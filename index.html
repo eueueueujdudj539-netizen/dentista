@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorriso Prime Odontologia | Clínica Odontológica de Alto Padrão</title>
+    <meta name="description" content="Clínica odontológica de alto padrão em São Paulo. Especialistas em Implantes, Lentes de Contato e Ortodontia Digital. 45.000 pacientes atendidos.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+    <!-- MODAL OVERLAY PARA TODOS OS MODAIS (Fora do fluxo de renderização) -->
+    <div class="modal-overlay" id="globalModalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModals()">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Título</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content-rich" id="modalContent"></div>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-primary" style="margin-right: 1rem;">Agendar Avaliação</a>
+                    <a href="https://wa.me/5511925312151" target="_blank" class="btn btn-whatsapp">Tirar Dúvida no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Sorriso<span>Prime</span></a>
+            <button class="mobile-toggle" onclick="toggleNav()">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#especialidades" class="nav-link">Especialidades</a>
+                <a href="#tecnologia" class="nav-link">Tecnologia</a>
+                <a href="#equipe" class="nav-link">Corpo Clínico</a>
+                <a href="#convenios" class="nav-link">Convênios</a>
+                <a href="#faq" class="nav-link">Base de Conhecimento</a>
+                <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-primary">Agendar Consulta</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <img src="images/hero-bg.png" alt="Recepção Sorriso Prime" class="hero-bg">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">A excelência em odontologia que o seu sorriso <span>merece.</span></h1>
+                <p class="hero-subtitle">Tecnologia digital de ponta, equipe multidisciplinar de especialistas e mais de 24 anos de tradição em transformar sorrisos com conforto absoluto.</p>
+                
+                <div class="hero-benefits">
+                    <div class="benefit-item"><span class="benefit-icon">✓</span> Atendimento por especialistas altamente qualificados</div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span> Avaliação personalizada com escaneamento 3D</div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span> Condições facilitadas e parcelamento exclusivo</div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">AGENDAR AVALIAÇÃO</a>
+                    <a href="https://wa.me/5511925312151" target="_blank" class="btn btn-whatsapp" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">ATENDIMENTO WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO RÁPIDO (SOBREPOSTO) -->
+    <section class="appointment-section container">
+        <div class="appointment-card">
+            <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem;">Pré-agendamento Rápido</h3>
+            <form action="https://linkmagico.app.br/pricing" method="GET">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">WhatsApp</label>
+                        <input type="tel" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Especialidade Desejada</label>
+                        <select class="form-control">
+                            <option>Selecione...</option>
+                            <option>Implantes</option>
+                            <option>Lentes de Contato</option>
+                            <option>Aparelho Invisível</option>
+                            <option>Clínico Geral / Limpeza</option>
+                            <option>Dor / Urgência</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Modalidade</label>
+                        <select class="form-control">
+                            <option>Particular</option>
+                            <option>Convênio (Amil, Bradesco, etc)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-accent" style="width: 100%;">SOLICITAR HORÁRIO DISPONÍVEL</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- NUMBERS -->
+    <section class="section section-light text-center">
+        <div class="container">
+            <div class="tech-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div><h3 style="font-size: 3rem; color: var(--primary);">24</h3><p style="font-weight: 600;">Anos de Tradição</p></div>
+                <div><h3 style="font-size: 3rem; color: var(--primary);">45.000</h3><p style="font-weight: 600;">Pacientes Atendidos</p></div>
+                <div><h3 style="font-size: 3rem; color: var(--primary);">18.000</h3><p style="font-weight: 600;">Implantes Realizados</p></div>
+                <div><h3 style="font-size: 3rem; color: var(--primary);">100%</h3><p style="font-weight: 600;">Tecnologia Digital</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="section" id="especialidades">
+        <div class="container">
+            <h2 class="section-title">Especialidades Odontológicas</h2>
+            <p class="section-subtitle">Na Sorriso Prime Odontologia, contamos com uma equipe multidisciplinar. Isso significa que, independentemente do seu problema, temos o especialista correto para o seu caso na mesma clínica.</p>
+            
+            <div class="specialties-grid">
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🦷</div>
+                    <h3 class="specialty-title">Implantes Dentários</h3>
+                    <p class="specialty-desc">Solução definitiva para dentes perdidos com tecnologia guiada.</p>
+                    <button onclick="openSpecialtyModal('Implantes Dentários')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">✨</div>
+                    <h3 class="specialty-title">Ortodontia</h3>
+                    <p class="specialty-desc">Correção do alinhamento dentário com aparelhos modernos e alinhadores invisíveis.</p>
+                    <button onclick="openSpecialtyModal('Ortodontia')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🌟</div>
+                    <h3 class="specialty-title">Clareamento Dental</h3>
+                    <p class="specialty-desc">Recuperação do branco natural dos dentes com laser ou moldeiras.</p>
+                    <button onclick="openSpecialtyModal('Clareamento Dental')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">💎</div>
+                    <h3 class="specialty-title">Lentes de Contato Dental</h3>
+                    <p class="specialty-desc">Facetas ultrafinas de porcelana para transformação completa do sorriso.</p>
+                    <button onclick="openSpecialtyModal('Lentes de Contato Dental')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🛡️</div>
+                    <h3 class="specialty-title">Facetas em Porcelana</h3>
+                    <p class="specialty-desc">Restauração da estética e função com facetas duráveis e naturais.</p>
+                    <button onclick="openSpecialtyModal('Facetas em Porcelana')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">😁</div>
+                    <h3 class="specialty-title">Próteses</h3>
+                    <p class="specialty-desc">Reabilitação oral completa com próteses fixas, móveis ou sobre implantes.</p>
+                    <button onclick="openSpecialtyModal('Próteses')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🩺</div>
+                    <h3 class="specialty-title">Canal (Endodontia)</h3>
+                    <p class="specialty-desc">Tratamento indolor da raiz do dente com microscopia clínica.</p>
+                    <button onclick="openSpecialtyModal('Canal (Endodontia)')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🌿</div>
+                    <h3 class="specialty-title">Periodontia</h3>
+                    <p class="specialty-desc">Tratamento de gengivite e periodontite para saúde dos tecidos de suporte.</p>
+                    <button onclick="openSpecialtyModal('Periodontia')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">👶</div>
+                    <h3 class="specialty-title">Odontopediatria</h3>
+                    <p class="specialty-desc">Atendimento lúdico e especializado para bebês, crianças e adolescentes.</p>
+                    <button onclick="openSpecialtyModal('Odontopediatria')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">✂️</div>
+                    <h3 class="specialty-title">Cirurgia Oral</h3>
+                    <p class="specialty-desc">Extrações complexas, sisos e pequenas cirurgias com sedação.</p>
+                    <button onclick="openSpecialtyModal('Cirurgia Oral')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🦴</div>
+                    <h3 class="specialty-title">Bucomaxilofacial</h3>
+                    <p class="specialty-desc">Cirurgias ortognáticas e tratamento de traumas faciais.</p>
+                    <button onclick="openSpecialtyModal('Bucomaxilofacial')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🎭</div>
+                    <h3 class="specialty-title">Estética Dental</h3>
+                    <p class="specialty-desc">Harmonização do sorriso com resinas de alta performance.</p>
+                    <button onclick="openSpecialtyModal('Estética Dental')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">💉</div>
+                    <h3 class="specialty-title">Harmonização Orofacial</h3>
+                    <p class="specialty-desc">Botox e preenchimento para equilibrar a estética da face e do sorriso.</p>
+                    <button onclick="openSpecialtyModal('Harmonização Orofacial')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🗣️</div>
+                    <h3 class="specialty-title">DTM (Disfunção Temporomandibular)</h3>
+                    <p class="specialty-desc">Tratamento para dores na articulação da mandíbula e dores de cabeça.</p>
+                    <button onclick="openSpecialtyModal('DTM (Disfunção Temporomandibular)')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">😬</div>
+                    <h3 class="specialty-title">Bruxismo</h3>
+                    <p class="specialty-desc">Controle do ranger de dentes com placas miorrelaxantes e toxina botulínica.</p>
+                    <button onclick="openSpecialtyModal('Bruxismo')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🛡️</div>
+                    <h3 class="specialty-title">Odontologia Preventiva</h3>
+                    <p class="specialty-desc">Limpezas profundas, flúor e selantes para evitar cáries e doenças.</p>
+                    <button onclick="openSpecialtyModal('Odontologia Preventiva')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">💻</div>
+                    <h3 class="specialty-title">Odontologia Digital</h3>
+                    <p class="specialty-desc">Escaneamento 3D e impressão de próteses no mesmo dia.</p>
+                    <button onclick="openSpecialtyModal('Odontologia Digital')" class="btn-outline" style="border:none; padding: 0.5rem 0; text-align:left; font-weight:bold; cursor:pointer;">Ler mais detalhes →</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESSO TIMELINE -->
+    <section class="section section-light" id="processo">
+        <div class="container">
+            <h2 class="section-title text-center" style="display: block;">A Jornada do Paciente</h2>
+            <p class="section-subtitle text-center">Nosso processo foi desenhado para garantir previsibilidade, segurança e total conforto, do primeiro contato ao sorriso finalizado.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Agendamento Premium</h3>
+                        <p>Contato via WhatsApp ou formulário. Nossa equipe entende sua demanda preliminar e direciona para o especialista mais adequado. Um lembrete digital é enviado com orientações de chegada e estacionamento.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Avaliação Clínica & Check-up Digital</h3>
+                        <p>Realizamos escaneamento intraoral 3D da sua boca, fotos em estúdio clínico e radiografias digitais. O especialista examina não apenas os dentes, mas musculatura, gengiva e articulação, garantindo um diagnóstico macro.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Planejamento & Orçamento</h3>
+                        <p>O caso é estudado pela equipe multidisciplinar. Apresentamos as opções de tratamento, simulamos o resultado final na tela (Planejamento Digital) e passamos os valores, prazos e formas de parcelamento transparentes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Execução do Tratamento</h3>
+                        <p>Com conforto (TV, fone antirruído, mantas) e possibilidade de sedação. Graças à tecnologia digital e laboratório parceiro integrado, as etapas são reduzidas e os resultados mais rápidos e precisos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Acompanhamento & Prevenção</h3>
+                        <p>Seu sorriso finalizado é nossa responsabilidade contínua. Você entra no programa de retornos preventivos a cada 6 meses (profilaxia clínica), garantindo a longevidade dos implantes, lentes e saúde gengival.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECNOLOGIA -->
+    <section class="section section-dark" id="tecnologia">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block;">Tecnologia & Biossegurança</h2>
+            <p class="section-subtitle text-center">A odontologia analógica ficou no passado. Investimos continuamente em equipamentos alemães e suíços para garantir precisão cirúrgica e conforto ímpar.</p>
+            
+            <div class="tech-grid">
+                
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Scanner Intraoral 3D</h3>
+                    <p>Adeus às massinhas de molde desconfortáveis. Mapeamento 100% digital e indolor da sua boca.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Microscopia Clínica</h3>
+                    <p>Tratamentos de canal com precisão milimétrica, garantindo taxa de sucesso próxima a 100%.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Sedação Consciente</h3>
+                    <p>Óxido nitroso para pacientes com fobia. Você relaxa totalmente enquanto cuidamos do seu sorriso.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Planejamento Digital</h3>
+                    <p>Veja como seu sorriso vai ficar antes mesmo de começar o tratamento com lentes ou facetas.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE CLÍNICA -->
+    <section class="section" id="equipe">
+        <div class="container">
+            <h2 class="section-title">Nosso Corpo Clínico</h2>
+            <p class="section-subtitle">Profissionais com mestrado, doutorado e especializações nas melhores instituições do mundo. Aqui, você não é atendido por "qualquer um", mas pelo melhor da área.</p>
+            
+            <div class="team-grid">
+                
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="team-img-placeholder">R</div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-cro">CRO-SP 45.678</div>
+                        <h3 class="team-name">Dr. Ricardo Mendonça</h3>
+                        <div class="team-role">Diretor Clínico & Implantodontista</div>
+                        <p class="mb-2 text-muted">Especialista e Mestre em Implantodontia pela USP. Mais de 20 anos de experiência.</p>
+                        <div class="team-details">
+                            <ul>
+                                <li>Atendimento: Seg a Sex</li>
+                                <li>Idiomas: Português, Inglês</li>
+                            </ul>
+                        </div>
+                        <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-outline" style="width: 100%;">Agendar com Especialista</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="team-img-placeholder"> </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-cro">CRO-SP 89.123</div>
+                        <h3 class="team-name">Dra. Camila Assis</h3>
+                        <div class="team-role">Especialista em Ortodontia</div>
+                        <p class="mb-2 text-muted">Invisalign Top Doctor. Especialista em alinhadores invisíveis e ortopedia facial.</p>
+                        <div class="team-details">
+                            <ul>
+                                <li>Atendimento: Ter, Qui e Sab</li>
+                                <li>Idiomas: Português, Inglês</li>
+                            </ul>
+                        </div>
+                        <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-outline" style="width: 100%;">Agendar com Especialista</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="team-img-placeholder">F</div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-cro">CRO-SP 34.567</div>
+                        <h3 class="team-name">Dr. Fernando Costa</h3>
+                        <div class="team-role">Estética Dental e Prótese</div>
+                        <p class="mb-2 text-muted">Referência em Lentes de Contato Dental. Pós-graduado pela NYU (Nova York).</p>
+                        <div class="team-details">
+                            <ul>
+                                <li>Atendimento: Seg a Sex</li>
+                                <li>Idiomas: Português, Inglês</li>
+                            </ul>
+                        </div>
+                        <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-outline" style="width: 100%;">Agendar com Especialista</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="team-img-placeholder"> </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-cro">CRO-SP 76.890</div>
+                        <h3 class="team-name">Dra. Juliana Ribeiro</h3>
+                        <div class="team-role">Odontopediatria</div>
+                        <p class="mb-2 text-muted">Atendimento humanizado para crianças. Especialista em sedação consciente.</p>
+                        <div class="team-details">
+                            <ul>
+                                <li>Atendimento: Seg, Qua e Sex</li>
+                                <li>Idiomas: Português, Inglês</li>
+                            </ul>
+                        </div>
+                        <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-outline" style="width: 100%;">Agendar com Especialista</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="team-img-placeholder">M</div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-cro">CRO-SP 23.456</div>
+                        <h3 class="team-name">Dr. Marcelo Silva</h3>
+                        <div class="team-role">Endodontia (Canal)</div>
+                        <p class="mb-2 text-muted">Especialista em tratamentos de canal em sessão única utilizando microscopia.</p>
+                        <div class="team-details">
+                            <ul>
+                                <li>Atendimento: Ter a Sab</li>
+                                <li>Idiomas: Português, Inglês</li>
+                            </ul>
+                        </div>
+                        <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-outline" style="width: 100%;">Agendar com Especialista</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="team-img-placeholder"> </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-cro">CRO-SP 98.765</div>
+                        <h3 class="team-name">Dra. Beatriz Santos</h3>
+                        <div class="team-role">Harmonização Orofacial</div>
+                        <p class="mb-2 text-muted">Especialista em simetria facial, botox e preenchedores ácido hialurônico.</p>
+                        <div class="team-details">
+                            <ul>
+                                <li>Atendimento: Qua e Sex</li>
+                                <li>Idiomas: Português, Inglês</li>
+                            </ul>
+                        </div>
+                        <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-outline" style="width: 100%;">Agendar com Especialista</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONVÊNIOS E PAGAMENTO -->
+    <section class="section section-light" id="convenios">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <h2 class="section-title">Convênios e Planos</h2>
+                    <p class="mb-3 text-muted">Trabalhamos com os melhores convênios do mercado, tanto por credenciamento direto quanto pelo vantajoso sistema de <strong>Livre Escolha e Reembolso</strong>. Nossa equipe administrativa cuida de toda a burocracia do reembolso para você.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+                        <span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">Amil Dental</span><span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">Bradesco Dental</span><span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">SulAmérica</span><span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">OdontoPrev</span><span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">Uniodonto</span><span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">Porto Seguro</span><span style="background: white; padding: 0.5rem 1rem; border: 1px solid #E2E8F0; border-radius: 4px; font-weight: 600;">Particular</span>
+                    </div>
+                    <a href="https://wa.me/5511925312151" target="_blank" class="btn btn-primary">Verificar Cobertura do meu Plano</a>
+                </div>
+                <div>
+                    <h2 class="section-title">Condições de Pagamento</h2>
+                    <p class="mb-3 text-muted">Acreditamos que a saúde bucal de excelência deve ser acessível. Oferecemos opções transparentes e justas para a viabilização do seu tratamento de alto padrão.</p>
+                    <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <li style="display: flex; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">💳</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem;">Cartão de Crédito em até 12x Sem Juros</h4>
+                                <p class="text-muted">Parcelamento facilitado em todos os cartões. Aceitamos divisão do valor em múltiplos cartões.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🏦</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem;">Financiamento Próprio e Parceiros (Até 36x)</h4>
+                                <p class="text-muted">Para procedimentos como Implantes e Lentes, dispomos de crédito via boleto mediante aprovação financeira.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">📱</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem;">PIX e À Vista com Descontos Exclusivos</h4>
+                                <p class="text-muted">Pacientes que optam por pagamentos à vista recebem descontos agressivos sobre o valor da tabela.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS CLÍNICOS (DEPOIMENTOS) -->
+    <section class="section" id="casos">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block;">Casos Clínicos & Depoimentos</h2>
+            <p class="section-subtitle text-center">Transformamos mais de 45.000 vidas através do sorriso. Conheça algumas dessas histórias reais de superação e autoestima restaurada.</p>
+            
+            <div class="tech-grid" style="grid-template-columns: repeat(3, 1fr);">
+                
+                <div class="timeline-content" style="background: var(--bg-light); border:none;">
+                    <span style="background: var(--accent); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight:bold; display:inline-block; margin-bottom: 1rem;">Implante</span>
+                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; font-size: 1.1rem;">"A equipe da Sorriso Prime mudou minha vida. O que mais me impressionou não foi apenas o resultado perfeito, mas o atendimento humano, sem dor, e a segurança em cada etapa."</p>
+                    <div style="border-top: 1px solid #CBD5E1; padding-top: 1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted);"><strong>Duração:</strong> 11 meses</p>
+                        <button onclick="openCaseModal(1)" style="background:none; border:none; color:var(--primary); font-weight:bold; margin-top:0.5rem; cursor:pointer;">Ler Relatório Clínico Completo →</button>
+                    </div>
+                </div>
+                
+                <div class="timeline-content" style="background: var(--bg-light); border:none;">
+                    <span style="background: var(--accent); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight:bold; display:inline-block; margin-bottom: 1rem;">Lentes de Contato</span>
+                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; font-size: 1.1rem;">"A equipe da Sorriso Prime mudou minha vida. O que mais me impressionou não foi apenas o resultado perfeito, mas o atendimento humano, sem dor, e a segurança em cada etapa."</p>
+                    <div style="border-top: 1px solid #CBD5E1; padding-top: 1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted);"><strong>Duração:</strong> 1 meses</p>
+                        <button onclick="openCaseModal(2)" style="background:none; border:none; color:var(--primary); font-weight:bold; margin-top:0.5rem; cursor:pointer;">Ler Relatório Clínico Completo →</button>
+                    </div>
+                </div>
+                
+                <div class="timeline-content" style="background: var(--bg-light); border:none;">
+                    <span style="background: var(--accent); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight:bold; display:inline-block; margin-bottom: 1rem;">Invisalign</span>
+                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; font-size: 1.1rem;">"A equipe da Sorriso Prime mudou minha vida. O que mais me impressionou não foi apenas o resultado perfeito, mas o atendimento humano, sem dor, e a segurança em cada etapa."</p>
+                    <div style="border-top: 1px solid #CBD5E1; padding-top: 1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted);"><strong>Duração:</strong> 5 meses</p>
+                        <button onclick="openCaseModal(3)" style="background:none; border:none; color:var(--primary); font-weight:bold; margin-top:0.5rem; cursor:pointer;">Ler Relatório Clínico Completo →</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ MASSIVA - BASE DE CONHECIMENTO -->
+    <section class="section section-light" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block;">Base de Conhecimento e Dúvidas</h2>
+            <p class="section-subtitle text-center">Nossa equipe de especialistas catalogou e respondeu centenas das perguntas mais comuns de nossos pacientes. Esta é uma das bases de informação odontológica mais completas do Brasil.</p>
+            
+            <div class="faq-layout">
+                <aside class="faq-sidebar">
+                    <div class="faq-search-box">
+                        <input type="text" class="faq-search-input" id="faqSearch" placeholder="🔍 Buscar dúvida...">
+                        <p id="faqCounter" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Exibindo todas as perguntas</p>
+                    </div>
+                    <h3 class="faq-cat-title">Categorias</h3>
+                    <div class="faq-cats" id="faqCatList">
+                        <button class="faq-cat-btn active" data-cat="all">Todas as Dúvidas</button>
+                        <button class="faq-cat-btn" data-cat="primeira-consulta">Primeira Consulta e Avaliação</button><button class="faq-cat-btn" data-cat="urgencia">Urgências e Dor de Dente</button><button class="faq-cat-btn" data-cat="implantes">Implantes Dentários</button><button class="faq-cat-btn" data-cat="lentes">Lentes de Contato e Facetas</button><button class="faq-cat-btn" data-cat="ortodontia">Aparelhos e Alinhadores (Invisalign)</button><button class="faq-cat-btn" data-cat="clareamento">Clareamento Dental</button><button class="faq-cat-btn" data-cat="financeiro">Preços, Convênios e Pagamento</button><button class="faq-cat-btn" data-cat="canal-(endodontia)">Dúvidas sobre Canal (Endodontia)</button><button class="faq-cat-btn" data-cat="periodontia">Dúvidas sobre Periodontia</button><button class="faq-cat-btn" data-cat="odontopediatria">Dúvidas sobre Odontopediatria</button><button class="faq-cat-btn" data-cat="siso">Dúvidas sobre Siso</button><button class="faq-cat-btn" data-cat="prótese-protocolo">Dúvidas sobre Prótese Protocolo</button><button class="faq-cat-btn" data-cat="sedação">Dúvidas sobre Sedação</button><button class="faq-cat-btn" data-cat="bruxismo">Dúvidas sobre Bruxismo</button>
+                    </div>
+                </aside>
+                
+                <div class="faq-content" id="faqContainer">
+                    
+                    <div class="faq-group active" data-group-cat="primeira-consulta">
+                        <h3 class="faq-group-title">Primeira Consulta e Avaliação</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Como funciona a primeira avaliação?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Sua primeira consulta na Sorriso Prime é um momento de descobertas. Realizamos um exame clínico completo, fotos digitais do seu sorriso, escaneamento 3D (se necessário) e radiografias iniciais. O dentista especialista conversará sobre suas expectativas, histórico médico e odontológico, e apresentará um plano de tratamento detalhado, explicando cada etapa, custos e prazos.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Quanto tempo dura a primeira consulta?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Geralmente reservamos de 45 a 60 minutos para a primeira avaliação. Queremos ter tempo suficiente para ouvir você, realizar exames essenciais e explicar tudo sem pressa.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Preciso levar radiografias antigas?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Se você tiver radiografias recentes (menos de 6 meses), traga-as. Caso não tenha, não se preocupe: possuímos equipamento de radiografia digital na própria clínica para realizar os exames na hora, com baixíssima radiação.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O orçamento é passado na mesma hora?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Na grande maioria dos casos, sim. O dentista responsável já elabora o planejamento e nossa equipe de atendimento apresenta as opções de valores e parcelamentos logo após a avaliação clínica. Casos cirúrgicos complexos podem necessitar de 24h para estudo detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">A avaliação é cobrada?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Trabalhamos com consultas particulares de alto valor agregado. A consulta de avaliação tem um custo que é 100% revertido como crédito em seu tratamento, caso você decida iniciar conosco. Consulte nossa central para valores atualizados.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="urgencia">
+                        <h3 class="faq-group-title">Urgências e Dor de Dente</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Estou com muita dor de dente, vocês atendem urgência?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Sim. Reservamos horários diários exclusivamente para encaixes de urgência. Entre em contato imediatamente pelo nosso WhatsApp relatando a dor, e nossa equipe priorizará seu atendimento no mesmo dia.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Meu dente quebrou, o que eu faço?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Mantenha a calma. Se possível, guarde o fragmento do dente em soro fisiológico ou leite. Evite mastigar do lado afetado e tome cuidado com alimentos quentes ou gelados. Agende uma urgência conosco o mais rápido possível para avaliação de restauração ou colagem.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">A gengiva está sangrando muito, é normal?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Não é normal. Sangramento gengival (ao escovar ou passar fio dental) é o principal sintoma de gengivite ou periodontite. Requer uma avaliação periodontal e profilaxia (limpeza profunda) para evitar a perda óssea em volta do dente.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Qual a diferença entre sensibilidade e dor de canal?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>A sensibilidade é uma dor aguda, rápida, como um "choque" ao ingerir algo gelado, quente ou doce, que passa logo após o estímulo. A dor de canal (pulpite) é espontânea, latejante, não passa, piora ao deitar e muitas vezes não cessa nem com analgésicos fortes.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="implantes">
+                        <h3 class="faq-group-title">Implantes Dentários</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O que é um implante dentário?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>O implante é um pino de titânio (material totalmente biocompatível) posicionado cirurgicamente no osso maxilar ou mandibular, abaixo da gengiva. Ele substitui a raiz do dente perdido e serve de base para a fixação de uma coroa (dente artificial) de porcelana.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Dói para colocar um implante?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Não. A cirurgia de instalação do implante é feita sob anestesia local (a mesma usada para uma restauração simples). Para pacientes ansiosos, oferecemos a opção de Sedação Consciente com óxido nitroso. O pós-operatório, seguindo as medicações prescritas, costuma ser indolor e muito tranquilo.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Existe rejeição do implante?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>O titânio é um material inerte, portanto não existe "rejeição" imunológica (como ocorre em transplantes de órgãos). O que pode ocorrer em raros casos (cerca de 2% a 5%) é a falha na osseointegração (o osso não abraçar o pino), geralmente associada a fumo, diabetes descontrolada ou infecções prévias.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Quanto tempo demora de colocar o pino até o dente definitivo?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>No protocolo tradicional, aguarda-se de 3 a 6 meses para a cicatrização óssea (osseointegração). Porém, dependendo da qualidade do seu osso, podemos realizar o "Implante de Carga Imediata", onde o pino e o dente provisório são instalados no mesmo dia!</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O que é implante Carga Imediata?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>É uma técnica avançada onde o dente artificial provisório é fixado sobre o implante no mesmo momento da cirurgia. Assim, o paciente não fica sem dente em nenhum momento. Requer condições ósseas excelentes, avaliadas via tomografia prévia.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Preciso de enxerto ósseo?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Apenas se você perdeu o dente há muitos anos e o osso da região sofreu reabsorção (afinou). A tomografia 3D nos mostrará exatamente o volume ósseo disponível. Se necessário, realizamos o enxerto no mesmo momento do implante ou meses antes, dependendo do caso.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="lentes">
+                        <h3 class="faq-group-title">Lentes de Contato e Facetas</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O que são Lentes de Contato Dental?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>São lâminas ultrafinas de porcelana (com cerca de 0.2mm a 0.5mm de espessura) coladas sobre os dentes naturais para alterar cor, formato, tamanho ou corrigir pequenos desalinhamentos, criando um sorriso perfeitamente harmonioso.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Qual a diferença entre Faceta e Lente de Contato?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>A diferença é a espessura. A Lente de Contato é extremamente fina e requer mínimo ou nenhum desgaste do dente natural. A Faceta é um pouco mais espessa e geralmente exige um desgaste maior do dente para acomodar o material, sendo ideal para dentes muito escurecidos ou manchados.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">As lentes podem manchar com café ou vinho?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Não. Diferente das resinas, as Lentes de Contato de porcelana possuem uma superfície vitrificada altamente resistente que não absorve pigmentos. Elas não amarelam, não mancham com café, vinho ou cigarro, mantendo a cor original por muitos anos.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Quanto tempo duram as Lentes de Contato?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Com os cuidados adequados de higiene (escovação, fio dental) e visitas regulares a cada 6 meses para profilaxia, as lentes de porcelana podem durar 10, 15 ou mais de 20 anos. São altamente resistentes e duráveis.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Dói para colocar as lentes?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>O procedimento é indolor. Quando é necessário algum desgaste mínimo, utilizamos anestesia local. O paciente passa por uma sessão de moldagem/escaneamento, uma de teste do sorriso (mockup) e a sessão final de cimentação (colagem) definitiva.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="ortodontia">
+                        <h3 class="faq-group-title">Aparelhos e Alinhadores (Invisalign)</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O que são alinhadores invisíveis?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>São placas transparentes e removíveis (como o Invisalign) feitas sob medida através de escaneamento 3D. Elas aplicam forças suaves para mover os dentes para a posição correta. São praticamente imperceptíveis e muito mais confortáveis que aparelhos fixos.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Alinhador transparente dói?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>A cada troca de placa (geralmente a cada 7 ou 14 dias), você pode sentir uma leve pressão nos dentes nos primeiros dois dias, o que significa que os dentes estão se movendo. É um desconforto muito menor do que os tradicionais "apertos" do aparelho metálico.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O tratamento com alinhador é mais rápido?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Em muitos casos, sim! Como o planejamento é feito por software 3D (ClinCheck), a movimentação é extremamente precisa. Casos que levariam 2 anos com aparelho fixo podem ser resolvidos em 8 a 12 meses com alinhadores, dependendo da colaboração do paciente no uso (22h por dia).</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Posso tirar o alinhador para comer?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Sim! Essa é uma das maiores vantagens. Você remove o alinhador para fazer suas refeições e para escovar os dentes e passar o fio dental. Não há restrições alimentares (como evitar amendoim ou pipoca), garantindo total liberdade e higiene perfeita.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Ainda usam aparelho fixo metálico?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Sim, aparelhos fixos metálicos ou de porcelana (estéticos) continuam sendo opções excelentes e acessíveis para corrigir o alinhamento. A escolha entre fixo e alinhador invisível depende do diagnóstico do ortodontista e da preferência/orçamento do paciente.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="clareamento">
+                        <h3 class="faq-group-title">Clareamento Dental</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">O clareamento estraga o esmalte do dente?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Mito. O clareamento feito com supervisão do dentista é totalmente seguro. Os agentes clareadores agem quebrando as moléculas de pigmento dentro do dente, sem causar nenhum desgaste ou alteração na estrutura do esmalte.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Dói para fazer clareamento?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>O clareamento em si não dói. No entanto, alguns pacientes podem apresentar sensibilidade dentária temporária durante o tratamento. Na Sorriso Prime, utilizamos géis modernos com dessensibilizantes na fórmula e prescrevemos cremes dentais específicos para garantir seu conforto.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Qual é melhor: a laser (consultório) ou caseiro?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Ambos são eficazes! O clareamento de consultório (laser/LED) oferece resultados rápidos em 1 ou 2 sessões. O caseiro (com moldeiras) é feito em casa por cerca de 14 a 21 dias. Frequentemente recomendamos a "Técnica Mista", que une os dois métodos para um resultado mais branco e duradouro.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Quanto tempo dura o efeito do clareamento?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Depende dos seus hábitos. O resultado costuma durar de 1 a 3 anos. Pacientes que consomem muito café, vinho tinto, chás escuros ou que fumam tendem a perder o brilho mais rápido. Recomendamos um "retoque" anual para manter os dentes sempre brancos.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="financeiro">
+                        <h3 class="faq-group-title">Preços, Convênios e Pagamento</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Vocês aceitam planos de saúde/convênios?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Atendemos diversos planos de saúde na modalidade de reembolso. Além disso, somos credenciados para procedimentos específicos de parceiros como Amil Dental Premium e Bradesco Dental Top. Consulte nossa equipe de atendimento informando o número da sua carteirinha para verificarmos a cobertura exata.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Como funciona o parcelamento de tratamentos?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Oferecemos excelentes condições. Você pode parcelar seu tratamento em até 12x sem juros no cartão de crédito. Para procedimentos maiores (como implantes e lentes), oferecemos financiamento próprio ou via parceiros financeiros em até 24 a 36 parcelas, sujeito a análise de crédito.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Aceitam pagamento em PIX ou Boleto?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Sim. Pagamentos à vista (PIX ou dinheiro) possuem descontos especiais exclusivos. Para boletos, temos parcerias com financeiras que permitem o parcelamento mensal (sujeito à aprovação de crédito).</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pode me passar o preço de um implante por WhatsApp?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>O Conselho Federal de Odontologia (CFO) nos proíbe de passar orçamentos precisos sem uma avaliação clínica presencial. O valor varia enormemente dependendo da necessidade de osso, tipo de pino (nacional ou suíço) e material da coroa. Agende uma avaliação para recebermos seu orçamento completo.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="canal-(endodontia)">
+                        <h3 class="faq-group-title">Dúvidas sobre Canal (Endodontia)</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Canal (Endodontia) - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Canal (Endodontia) são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Canal (Endodontia) exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Canal (Endodontia) - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Canal (Endodontia) são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Canal (Endodontia) exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Canal (Endodontia) - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Canal (Endodontia) são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Canal (Endodontia) exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Canal (Endodontia) - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Canal (Endodontia) são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Canal (Endodontia) exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Canal (Endodontia) - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Canal (Endodontia) são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Canal (Endodontia) exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="periodontia">
+                        <h3 class="faq-group-title">Dúvidas sobre Periodontia</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Periodontia - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Periodontia são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Periodontia exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Periodontia - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Periodontia são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Periodontia exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Periodontia - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Periodontia são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Periodontia exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Periodontia - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Periodontia são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Periodontia exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Periodontia - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Periodontia são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Periodontia exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="odontopediatria">
+                        <h3 class="faq-group-title">Dúvidas sobre Odontopediatria</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Odontopediatria - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Odontopediatria são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Odontopediatria exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Odontopediatria - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Odontopediatria são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Odontopediatria exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Odontopediatria - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Odontopediatria são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Odontopediatria exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Odontopediatria - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Odontopediatria são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Odontopediatria exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Odontopediatria - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Odontopediatria são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Odontopediatria exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="siso">
+                        <h3 class="faq-group-title">Dúvidas sobre Siso</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Siso - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Siso são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Siso exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Siso - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Siso são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Siso exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Siso - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Siso são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Siso exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Siso - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Siso são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Siso exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Siso - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Siso são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Siso exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="prótese-protocolo">
+                        <h3 class="faq-group-title">Dúvidas sobre Prótese Protocolo</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Prótese Protocolo - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Prótese Protocolo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Prótese Protocolo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Prótese Protocolo - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Prótese Protocolo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Prótese Protocolo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Prótese Protocolo - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Prótese Protocolo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Prótese Protocolo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Prótese Protocolo - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Prótese Protocolo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Prótese Protocolo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Prótese Protocolo - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Prótese Protocolo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Prótese Protocolo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="sedação">
+                        <h3 class="faq-group-title">Dúvidas sobre Sedação</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Sedação - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Sedação são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Sedação exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Sedação - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Sedação são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Sedação exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Sedação - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Sedação são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Sedação exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Sedação - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Sedação são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Sedação exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Sedação - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Sedação são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Sedação exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="faq-group active" data-group-cat="bruxismo">
+                        <h3 class="faq-group-title">Dúvidas sobre Bruxismo</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Bruxismo - Caso 1?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Bruxismo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Bruxismo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Bruxismo - Caso 2?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Bruxismo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Bruxismo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Bruxismo - Caso 3?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Bruxismo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Bruxismo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Bruxismo - Caso 4?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Bruxismo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Bruxismo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">Pergunta comum sobre Bruxismo - Caso 5?</button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>As dúvidas sobre Bruxismo são muito comuns em nossa clínica. Nossa equipe está altamente preparada para realizar este procedimento utilizando tecnologia de ponta. É fundamental realizar uma avaliação clínica e radiográfica para determinar a complexidade do seu caso específico. Tratamentos de Bruxismo exigem acompanhamento profissional adequado para garantir longevidade e saúde bucal plena. Recomendamos agendar uma consulta para planejamento detalhado.</p>
+                                    <div style="margin-top: 1rem; border-top: 1px dashed #CBD5E1; padding-top: 1rem;">
+                                        <a href="https://linkmagico.app.br/pricing" target="_blank" style="color: var(--primary); font-weight:600; font-size:0.9rem;">Deseja tratar isso? Agende uma avaliação →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOSSÁRIO TÉCNICO -->
+    <section class="section" id="glossario">
+        <div class="container">
+            <h2 class="section-title text-center" style="display:block;">Glossário Odontológico</h2>
+            <p class="section-subtitle text-center">Dicionário rápido para você entender melhor os termos que nossos dentistas usam durante o planejamento do seu sorriso.</p>
+            
+            <div class="glossary-grid">
+                
+                <div class="glossary-term">
+                    <h4>Implante</h4>
+                    <p>Pino de titânio instalado no osso para substituir a raiz do dente.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Osseointegração</h4>
+                    <p>Processo biológico onde o osso cicatriza e se une firmemente ao pino de titânio do implante.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Prótese Protocolo</h4>
+                    <p>Prótese fixa total (todos os dentes) parafusada sobre 4 a 6 implantes.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Endodontia</h4>
+                    <p>Especialidade que trata da polpa do dente, popularmente conhecido como tratamento de canal.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Periodontia</h4>
+                    <p>Especialidade que cuida da gengiva e dos ossos que sustentam os dentes.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Cárie</h4>
+                    <p>Destruição da estrutura dental causada por ácidos produzidos por bactérias na placa bacteriana.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Bruxismo</h4>
+                    <p>Hábito involuntário de ranger ou apertar os dentes, geralmente durante o sono.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Invisalign</h4>
+                    <p>Marca líder de alinhadores ortodônticos invisíveis e removíveis.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Lente de Contato Dental</h4>
+                    <p>Lâmina ultrafina de porcelana colada sobre o dente para estética.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Tártaro (Cálculo)</h4>
+                    <p>Placa bacteriana endurecida (calcificada) que só o dentista consegue remover.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Termo Odontológico 11</h4>
+                    <p>Definição técnica e simplificada do termo odontológico. Procedimento, estrutura anatômica ou material utilizado na rotina clínica da odontologia avançada, visando restaurar função e estética do paciente.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Termo Odontológico 12</h4>
+                    <p>Definição técnica e simplificada do termo odontológico. Procedimento, estrutura anatômica ou material utilizado na rotina clínica da odontologia avançada, visando restaurar função e estética do paciente.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section section-dark text-center" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary));">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem; color: white;">Chegou a hora de transformar seu sorriso.</h2>
+            <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 3rem;">Agende sua avaliação com nossos especialistas. Descubra como a tecnologia digital pode entregar resultados mais rápidos, seguros e indolor.</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://linkmagico.app.br/pricing" target="_blank" class="btn btn-accent" style="font-size: 1.2rem; padding: 1.2rem 2.5rem; color: white;">AGENDAR AVALIAÇÃO AGORA</a>
+                <a href="https://wa.me/5511925312151" target="_blank" class="btn btn-whatsapp" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">FALAR NO WHATSAPP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">Sorriso<span>Prime</span></div>
+                    <p class="footer-desc">A mais completa clínica odontológica de alto padrão de São Paulo. Tecnologia digital, atendimento humanizado e corpo clínico de excelência há mais de duas décadas.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <!-- Social Icons Placeholder -->
+                        <span style="font-size: 1.5rem; cursor: pointer;">📷</span>
+                        <span style="font-size: 1.5rem; cursor: pointer;">📘</span>
+                        <span style="font-size: 1.5rem; cursor: pointer;">💼</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Nossa Clínica</h4>
+                    <ul class="footer-links">
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#equipe">Corpo Clínico</a></li>
+                        <li><a href="#tecnologia">Tecnologia</a></li>
+                        <li><a href="#casos">Casos e Depoimentos</a></li>
+                        <li><a href="#faq">Central de Ajuda (FAQ)</a></li>
+                        <li><a href="https://linkmagico.app.br/pricing">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Atendimento</h4>
+                    <ul class="footer-links">
+                        <li><a href="#convenios">Convênios e Reembolso</a></li>
+                        <li><a href="#convenios">Formas de Pagamento</a></li>
+                        <li><a href="https://wa.me/5511925312151">Emergência Odontológica</a></li>
+                        <li><a href="https://linkmagico.app.br/pricing">Agendamento Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contato & Endereço</h4>
+                    <ul class="footer-contact">
+                        <li>📍 <div>Av. Paulista, 1500 - Bela Vista, São Paulo - SP<br><small>Estacionamento gratuito e valet</small></div></li>
+                        <li>📞 <div>(11) 4002-8922</div></li>
+                        <li>📱 <div>WhatsApp: (11) 92531-2151</div></li>
+                        <li>🕒 <div>Seg a Sex: 08h às 20h<br>Sáb: 08h às 14h</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sorriso Prime Odontologia. Todos os direitos reservados. CRO-SP Clínica: 12.345 | Resp. Técnico: Dr. Ricardo Mendonça CRO-SP 45.678</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748B;">Esta página é uma simulação avançada de ambiente clínico para demonstrações de inteligência artificial (Link Mágico).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="scripts.js?v=2"></script>
+</body>
+</html>
